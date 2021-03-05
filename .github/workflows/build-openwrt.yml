@@ -117,6 +117,7 @@ jobs:
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@master
+  
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware
